@@ -60,23 +60,27 @@ project {
         features {
             commitStatusPublisher {
                 vcsRootExtId = "${MyVSCRoot.id}"
-                publisher = bitbucketCloud {
-                        userName="%system.commit.status.publisher.username%"
-                        password="%system.commit.status.publisher.password%"
+                publisher = bitbucketServer {
+                    url = "http://tcqa-bitbucket-server:7990"
+                    userName = "%system.commit.status.publisher.username%"
+                    password = "%system.commit.status.publisher.password%"
                 }
             }
         }
     })
 
     object MyVSCRoot : GitVcsRoot({
-        id("ShortBranches3_HttpsKse19202bitbucketOrgKse19202kotlinBbGit")
-        name = "https://kse19202@bitbucket.org/kse19202/kotlin_bb.git"
-        url = "https://kse19202@bitbucket.org/kse19202/kotlin_bb.git"
+        id("HttpAdminTcqaBitbucketServer7990scmKsepKseproject1git")
+        name = "http://admin@tcqa-bitbucket-server:7990/scm/ksep/kseproject1.git"
+        url = "http://admin@tcqa-bitbucket-server:7990/scm/ksep/kseproject1.git"
         branchSpec = """
-        +:refs/(pull-requests/*/from)    
         +:refs/heads/(*)
         -:refs/heads/release/4.0
     """.trimIndent()
+        authMethod = password {
+            userName="admin"
+            password="admin"
+        }
         serverSideAutoCRLF = true
     })
 
