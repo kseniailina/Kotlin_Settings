@@ -28,7 +28,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2019.1"
 
 project {
- //   vcsRoot(MyVSCRoot)
+    vcsRoot(MyVSCRoot)
     buildType(Build)
 }
 
@@ -39,7 +39,7 @@ project {
         buildNumberPattern = "unknown-%build.counter%"
 
         vcs {
- //           root(MyVSCRoot)
+            root(MyVSCRoot)
             checkoutMode = CheckoutMode.ON_AGENT
             cleanCheckout = true
         }
@@ -57,14 +57,14 @@ project {
         }
     })
 
- /*   object MyVSCRoot : GitVcsRoot({
+    object MyVSCRoot : GitVcsRoot({
         id("KotlinSettings_HttpsGithubComKseniailinaKotlinSettingsGit1")
-        name = "https://github.com/kseniailina/Kotlin_Settings.git"
+        name = "https://github.com/kseniailina/Kotlin_Settings.git1"
         url = "https://github.com/kseniailina/Kotlin_Settings.git"
         branchSpec = """
         +:refs/heads/(*)
         -:refs/heads/release/4.0
     """.trimIndent()
         serverSideAutoCRLF = true
-    })*/
+    })
 
