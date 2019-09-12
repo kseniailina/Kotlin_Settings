@@ -57,19 +57,15 @@ project {
             }
         }
 
-  /*      features {
+        features {
             commitStatusPublisher {
                 vcsRootExtId = "${MyVSCRoot.id}"
-                publisher = github {
-                    githubUrl = "https://api.github.com"
-                    authType = password {
+                publisher = bitbucketCloud {
                         userName="%system.commit.status.publisher.username%"
                         password="%system.commit.status.publisher.password%"
-
-                    }
                 }
             }
-        }*/
+        }
     })
 
     object MyVSCRoot : GitVcsRoot({
