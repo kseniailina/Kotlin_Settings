@@ -14,5 +14,8 @@ changeProject(DslContext.projectId) {
         add {
             param("system.bitbuck.username", "admin")
         }
+        add {
+            password("system.bitbuck.password", "credentialsJSON:d36b965b-5b1c-4e1e-970d-f3b681f6ad39")
+        }
     }
 }
