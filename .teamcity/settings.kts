@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2018_2.*
+import jetbrains.buildServer.configs.kotlin.v2018_2.buildFeatures.commitStatusPublisher
 import jetbrains.buildServer.configs.kotlin.v2018_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2018_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2018_2.vcs.GitVcsRoot
@@ -53,6 +54,20 @@ project {
         triggers {
             vcs {
                 branchFilter = ""
+            }
+        }
+
+        features {
+            commitStatusPublisher {
+                vcsRootExtId = "${MyVSCRoot.id}"
+                publisher = github {
+                    githubUrl = "https://api.github.com"
+                    authType = password {
+                        userName="%system.commit.status.publisher.username%"
+                        password="%system.commit.status.publisher.password%"
+
+                    }
+                }
             }
         }
     })
