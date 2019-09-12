@@ -40,8 +40,8 @@ changeBuildType(RelativeId("KotlinSetBuild")) {
         feature1.apply {
             publisher = bitbucketServer {
                 url = "http://tcqa-bitbucket-server:7990"
-                userName = "%system.commit.status.publisher.username%"
-                password = "credentialsJSON:39c84da1-6f67-4f70-8523-b1e0f23e9abc"
+                userName = "admin"
+                password = "credentialsJSON:a6e14d8a-f088-458c-806b-ce4ae61872cf"
             }
         }
     }
