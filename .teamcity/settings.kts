@@ -67,6 +67,13 @@ project {
                 }
             }
         }
+        dependencies {
+            dependency(AbsoluteId("SecRepos_Build")) {
+                snapshot {
+                    onDependencyFailure = FailureAction.FAIL_TO_START
+                }
+            }
+        }
     })
 
     object MyVSCRoot : GitVcsRoot({
