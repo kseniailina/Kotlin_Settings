@@ -53,7 +53,7 @@ project {
         triggers {
             vcs {
                 branchFilter = ""
-            }
+
         }
     })
 
