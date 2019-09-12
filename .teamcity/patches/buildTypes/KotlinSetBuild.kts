@@ -12,5 +12,9 @@ in the root project, and delete the patch script.
 create(DslContext.projectId, BuildType({
     id("KotlinSetBuild")
     name = "Kotlin_Set_Build"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 }))
 
