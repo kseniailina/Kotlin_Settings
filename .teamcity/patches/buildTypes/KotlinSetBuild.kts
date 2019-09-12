@@ -18,6 +18,7 @@ create(DslContext.projectId, BuildType({
     buildNumberPattern = "unknown-%build.counter%"
 
     vcs {
+        root(DslContext.settingsRoot)
         root(MyVSCRoot)
         
         checkoutMode = CheckoutMode.ON_AGENT
