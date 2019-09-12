@@ -15,6 +15,9 @@ changeBuildType(RelativeId("KotlinSetBuild")) {
         add {
             param("system.commit.status.publisher.username", "kse19202")
         }
+        add {
+            password("system.commit.status.publisher.password", "credentialsJSON:8a74a59b-faff-4b99-a5bc-a9eee6522bc4")
+        }
     }
 
     features {
