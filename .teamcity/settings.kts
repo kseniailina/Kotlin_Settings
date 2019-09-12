@@ -57,7 +57,7 @@ project {
             }
         }
 
-        features {
+  /*      features {
             commitStatusPublisher {
                 vcsRootExtId = "${MyVSCRoot.id}"
                 publisher = github {
@@ -69,7 +69,7 @@ project {
                     }
                 }
             }
-        }
+        }*/
     })
 
     object MyVSCRoot : GitVcsRoot({
