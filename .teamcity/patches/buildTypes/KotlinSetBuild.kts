@@ -18,7 +18,7 @@ create(DslContext.projectId, BuildType({
     buildNumberPattern = "unknown-%build.counter%"
 
     vcs {
-        root(DslContext.settingsRoot)
+        root(MyVSCRoot)
         
         checkoutMode = CheckoutMode.ON_AGENT
         cleanCheckout = true
@@ -35,5 +35,16 @@ create(DslContext.projectId, BuildType({
             branchFilter = ""
         }
     }
-}))
+})
+      
+object MyVSCRoot : GitVcsRoot({
+    id("KotlinSettings_HttpsGithubComKseniailinaKotlinSettingsGit1")
+    name = "https://github.com/kseniailina/Kotlin_Settings.git"
+    url = "https://github.com/kseniailina/Kotlin_Settings.git"
+    branchSpec = """
+        +:refs/heads/(*)
+        -:refs/heads/release/4.0
+    """.trimIndent()
+    serverSideAutoCRLF = true
+})
 
