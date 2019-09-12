@@ -16,7 +16,7 @@ changeBuildType(RelativeId("KotlinSetBuild")) {
             param("system.bitbuck.username", "admin")
         }
         add {
-            password("system.bitbuck.password", "credentialsJSON:a6e14d8a-f088-458c-806b-ce4ae61872cf")
+            param("system.commit.status.publisher.username", "admin")
         }
     }
 
