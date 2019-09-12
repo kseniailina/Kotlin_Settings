@@ -15,6 +15,9 @@ changeBuildType(RelativeId("KotlinSetBuild")) {
         add {
             param("system.commit.status.publisher.username", "admin")
         }
+        add {
+            param("system.commit.status.publisher.password", "admin")
+        }
     }
 
     features {
