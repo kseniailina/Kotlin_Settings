@@ -15,6 +15,8 @@ create(DslContext.projectId, BuildType({
     id("KotlinSetBuild")
     name = "Kotlin_Set_Build"
 
+    buildNumberPattern = "unknown-%build.counter%"
+
     vcs {
         root(DslContext.settingsRoot)
     }
