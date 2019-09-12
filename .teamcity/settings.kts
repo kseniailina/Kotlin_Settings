@@ -73,9 +73,9 @@ project {
     })
 
     object MyVSCRoot : GitVcsRoot({
-        id("KotlinSettings_HttpsGithubComKseniailinaKotlinSettingsGit1")
-        name = "https://github.com/kseniailina/Kotlin_Settings.git1"
-        url = "https://github.com/kseniailina/Kotlin_Settings.git"
+        id("ShortBranches3_HttpsKse19202bitbucketOrgKse19202kotlinBbGit")
+        name = "https://kse19202@bitbucket.org/kse19202/kotlin_bb.git"
+        url = "https://kse19202@bitbucket.org/kse19202/kotlin_bb.git"
         branchSpec = """
         +:refs/heads/(*)
         -:refs/heads/release/4.0
