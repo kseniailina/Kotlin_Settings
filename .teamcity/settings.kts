@@ -59,7 +59,7 @@ project {
 
     object MyVSCRoot : GitVcsRoot({
         id("KotlinSettings_HttpsGithubComKseniailinaKotlinSettingsGit1")
-        name = "https://github.com/kseniailina/Kotlin_Settings.git"
+        name = "https://github.com/kseniailina/Kotlin_Settings.git1"
         url = "https://github.com/kseniailina/Kotlin_Settings.git"
         branchSpec = """
         +:refs/heads/(*)
