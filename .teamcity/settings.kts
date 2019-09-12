@@ -78,8 +78,8 @@ project {
         -:refs/heads/release/4.0
     """.trimIndent()
         authMethod = password {
-            userName="%system.bitbuck.username%"
-            password="%system.bitbuck.password%"
+            userName = "%system.bitbuck.username%"
+            password = "%system.bitbuck.password%"
         }
         serverSideAutoCRLF = true
     })
