@@ -13,7 +13,7 @@ accordingly, and delete the patch script.
 changeBuildType(RelativeId("KotlinSetBuild")) {
     params {
         add {
-            param("system.commit.status.publisher.username", "kseniailina")
+            param("system.commit.status.publisher.username", "kse19202")
         }
     }
 
