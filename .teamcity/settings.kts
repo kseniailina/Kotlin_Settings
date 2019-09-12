@@ -73,7 +73,7 @@ project {
         name = "https://kse19202@bitbucket.org/kse19202/kotlin_bb.git"
         url = "https://kse19202@bitbucket.org/kse19202/kotlin_bb.git"
         branchSpec = """
-        +:+:refs/(pull-requests/*/from)    
+        +:refs/(pull-requests/*/from)    
         +:refs/heads/(*)
         -:refs/heads/release/4.0
     """.trimIndent()
